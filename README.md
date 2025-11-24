@@ -3,7 +3,7 @@ Simple transaction manager in java, which manages the overall in and out of the 
 
 **[PROJECT TITLE] - Simple Personal Finance Tracker**
 
-🌟 Overview of the Project
+#**🌟 Overview of the Project**
 
 This is a lightweight, console-based application designed to help users track their personal finances, specifically logging income and expenses. Built entirely in Java, the application provides core functionality for financial management, including real-time balance calculation and persistent data storage.
 
