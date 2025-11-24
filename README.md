@@ -1,43 +1,102 @@
-# TRANSACTION-MANAGER-JAVAPROJECT-24BCE10497
-Simple transaction manager in java, which manages the overall in and out of the money.
+<h1>[PROJECT TITLE] - Simple Personal Finance Tracker</h1>
 
-**[PROJECT TITLE] - Simple Personal Finance Tracker**
-
-#**🌟 Overview of the Project**
+<h1>🌟 Overview of the Project</h1>
 
 This is a lightweight, console-based application designed to help users track their personal finances, specifically logging income and expenses. Built entirely in Java, the application provides core functionality for financial management, including real-time balance calculation and persistent data storage.
 
 It serves as an excellent demonstration of object-oriented principles, data persistence using file I/O (Serialization), and standard Java utilities for date and console management.
 
-**✨ Features**
+<h1>🏗️ System Architecture</h1>
+
+The application follows a modular architecture separating the User Interface, Business Logic, and Data Persistence layers.
+
+
+
+
+Data Flow
+
+User interacts with the Console UI (ExpenseTrackerApp).
+
+The App delegates tasks to the TransactionManager.
+
+TransactionManager creates Transaction objects.
+
+Data is serialized and saved to transactions.ser for persistence.
+
+<h1>📂 Project Structure</h1>
+
+The project is designed with a modular file structure where each class handles a specific responsibility:
+
+ExpenseTracker/
+│
+├── ExpenseTrackerApp.java      # Main entry point (Console UI & Input Handling)
+├── TransactionManager.java     # Business logic, Calculations & File I/O
+├── Transaction.java            # Data Model (Serializable Object)
+├── TransactionType.java        # Enum (INCOME / EXPENSE)
+│
+├── README.md                   # Project Documentation & Instructions
+└── transactions.ser            # Data persistence file (Auto-generated after running)
+
+
+<h1>✨ Features</h1>
 
 The application provides the following functional modules and capabilities:
+
 Log New Income: Record a positive transaction amount with a category and description.
+
 Log New Expense: Record a negative transaction amount with a category and description.
+
 View All Transactions: Display a detailed, sequential list of all recorded income and expense items.
+
 Display Financial Summary: Calculates and shows the Total Income, Total Expenses, and the Net Balance in real-time.
+
 Remove Transaction: Allows the user to permanently delete a transaction record by its unique system ID.
+
 Data Persistence: All transactions are automatically saved to the transactions.ser file upon modification and are loaded automatically upon application start.
 
-**🛠️ Technologies/Tools Used**
+<h1>⚙️ Non-Functional Requirements</h1>
+
+The application adheres to the following quality attributes:
+
+Performance: The system is designed to be lightweight with minimal memory footprint (O(1) to O(n) operations). Transaction processing and balance calculations occur instantly without network latency, as all data is handled locally.
+
+Security: Data is stored locally using Java Serialization (.ser), which provides a binary format that is not human-readable via standard text editors, offering basic obfuscation. File access is governed by the operating system's user permission protocols.
+
+Usability: The interface utilizes a clear, menu-driven console structure. It employs ANSI color coding (Green for Income, Red for Expense) to enhance readability and provides immediate feedback for all user actions.
+
+Reliability: The application features robust exception handling (e.g., catching NumberFormatException for invalid amounts) to prevent runtime crashes. Data persistence ensures that records are saved automatically after every addition or deletion, protecting against data loss.
+
+<h1>🛠️ Technologies/Tools Used</h1>
+
 Language: Java (JDK 8 or higher)
 
 Core Concepts:
+
 Object-Oriented Programming (OOP)
+
 Data Serialization (java.io.Serializable) for persistence.
+
 Date and Time API (java.time.LocalDate)
+
 Standard Console I/O (java.util.Scanner)
 
-**🚀 Setup & Running the Project
-Prerequisites**
+<h1>🚀 Setup & Running the Project</h1>
+
+Prerequisites
 
 Ensure you have the following installed:
+
 Java Development Kit (JDK): Version 8 or newer.
+
 A Java Compiler (usually included with the JDK).
+
 Installation & Execution
+
 Clone the Repository:
+
 git clone [YOUR_REPOSITORY_URL]
 cd [PROJECT_TITLE_DIRECTORY]
+
 
 Compile the Java Files:
 Navigate to the directory containing all the .java files (ExpenseTrackerApp.java, TransactionManager.java, Transaction.java, TransactionType.java) and compile them:
@@ -50,9 +109,10 @@ Execute the main class:
 
 java ExpenseTrackerApp
 
+
 The console menu will appear, prompting you for action.
 
-**🧪 Instructions for Testing**
+<h1>🧪 Instructions for Testing</h1>
 
 Follow these steps to verify the core functionality and data persistence:
 
@@ -86,4 +146,16 @@ Select option 3. Show All Recorded Transactions to confirm the transaction is go
 
 Select option 4. Check Account Balance & Summary and confirm the net balance has been updated to reflect the deletion.
 
-**Screenshots**
+
+<h1>**📸 Screenshots**</h1>
+
+<img width="1013" height="721" alt="image" src="https://github.com/user-attachments/assets/4f9ce002-7745-41a0-acf3-c7297d281848" />
+<br>
+
+<img width="577" height="391" alt="image" src="https://github.com/user-attachments/assets/4d0312f0-2c14-429f-9e8b-b5b6ad2c621a" />
+<br>
+
+<img width="541" height="195" alt="image" src="https://github.com/user-attachments/assets/be4f3184-ed8f-4f28-ae84-f2fd144f4981" />
+<br>
+
+
