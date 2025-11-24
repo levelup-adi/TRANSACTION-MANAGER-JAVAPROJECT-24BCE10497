@@ -1,6 +1,9 @@
 <h1>[PROJECT TITLE] - Simple Personal Finance Tracker</h1>
 
+
 <h1>🌟 Overview of the Project</h1>
+
+This project made by **ADITYA RAJ SHARMA** **(24BCE10497)** for the VITYARTHI course.
 
 This is a lightweight, console-based application designed to help users track their personal finances, specifically logging income and expenses. Built entirely in Java, the application provides core functionality for financial management, including real-time balance calculation and persistent data storage.
 
@@ -10,18 +13,32 @@ It serves as an excellent demonstration of object-oriented principles, data pers
 
 The application follows a modular architecture separating the User Interface, Business Logic, and Data Persistence layers.
 
+      [ User ]
+         |
+         | (Inputs Commands 1-6)
+         v
++-------------------------------+
+|      Presentation Layer       |
+|     [ ExpenseTrackerApp ]     |
+|  (Console UI & Menu Logic)    |
++-------------------------------+
+               |
+               | (Delegates Actions)
+               v
++-------------------------------+
+|    Business Logic Layer       |
+|    [ TransactionManager ]     |
+| (Calculations & List Mgmt)    |
++-------------------------------+
+               |
+               | (Manages Data)
+               v
++-------------------------------+           +----------------------+
+|          Data Layer           |           |     File Storage     |
+|  [ Transaction Objects ]      |<--------->|   transactions.ser   |
+| (Serializable Data Models)    | (Save/Load)|    (Binary File)     |
++-------------------------------+           +----------------------+
 
-
-
-Data Flow
-
-User interacts with the Console UI (ExpenseTrackerApp).
-
-The App delegates tasks to the TransactionManager.
-
-TransactionManager creates Transaction objects.
-
-Data is serialized and saved to transactions.ser for persistence.
 
 <h1>📂 Project Structure</h1>
 
