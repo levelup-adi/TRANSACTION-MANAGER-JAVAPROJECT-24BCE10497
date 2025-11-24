@@ -9,50 +9,11 @@ This is a lightweight, console-based application designed to help users track th
 
 It serves as an excellent demonstration of object-oriented principles, data persistence using file I/O (Serialization), and standard Java utilities for date and console management.
 
-<h1>🏗️ System Architecture</h1>
-
-The application follows a modular architecture separating the User Interface, Business Logic, and Data Persistence layers.
-
-      [ User ]
-         |
-         | (Inputs Commands 1-6)
-         v
-+-------------------------------+
-|      Presentation Layer       |
-|     [ ExpenseTrackerApp ]     |
-|  (Console UI & Menu Logic)    |
-+-------------------------------+
-               |
-               | (Delegates Actions)
-               v
-+-------------------------------+
-|    Business Logic Layer       |
-|    [ TransactionManager ]     |
-| (Calculations & List Mgmt)    |
-+-------------------------------+
-               |
-               | (Manages Data)
-               v
-+-------------------------------+           +----------------------+
-|          Data Layer           |           |     File Storage     |
-|  [ Transaction Objects ]      |<--------->|   transactions.ser   |
-| (Serializable Data Models)    | (Save/Load)|    (Binary File)     |
-+-------------------------------+           +----------------------+
-
 
 <h1>📂 Project Structure</h1>
 
-The project is designed with a modular file structure where each class handles a specific responsibility:
+<img width="2816" height="1536" alt="Gemini_Generated_Image_ez0ek0ez0ek0ez0e" src="https://github.com/user-attachments/assets/48b3387b-68d2-48b1-a55f-8a87ff8402ea" />
 
-ExpenseTracker/
-│
-├── ExpenseTrackerApp.java      # Main entry point (Console UI & Input Handling)
-├── TransactionManager.java     # Business logic, Calculations & File I/O
-├── Transaction.java            # Data Model (Serializable Object)
-├── TransactionType.java        # Enum (INCOME / EXPENSE)
-│
-├── README.md                   # Project Documentation & Instructions
-└── transactions.ser            # Data persistence file (Auto-generated after running)
 
 
 <h1>✨ Features</h1>
